@@ -1,17 +1,8 @@
-﻿using AmazonAutomation.PageAction;
-using AmazonAutomation.PageObject;
-using AmazonAutomation.Test.HelperClass;
+﻿using AmazonAutomation.Test.HelperClass;
 using NUnit.Framework;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace AmazonAutomation.TestSuits
 {
@@ -33,7 +24,7 @@ namespace AmazonAutomation.TestSuits
         [Test]
         public void AmazonLoginWithValidUserNameAndPassword()
         {
-            LoginHelper.loginUsingValidCredentials();
+            LoginHelperObject.loginUsingValidCredentials();
             //WebDriverWait wait = new WebDriverWait(SeleniumDriver.driver,20);
             Thread.Sleep(40000);
             //SeleniumDriver.driver.Manage().Timeouts().ImplicitWait(10, TimeUnit.SECONDS);
@@ -43,24 +34,21 @@ namespace AmazonAutomation.TestSuits
         [Test]
         public void ContinueWithoutUserName()
         {
-            LoginHelper.loginWithNoCredential();
-            string errorMessage = LoginHelper.continueErrorMessage.GetTextFromThePage();
+            string errorMessage=LoginHelperObject.loginWithNoCredential();
             Assert.AreEqual(errorMessage, "Enter your email or mobile phone number");
         }
         [Test]
         public void LoginWithInvalidUserName()
         {
-            LoginHelper.loginWithInvalidCredential();
-            string invalidUsernameError = LoginHelper.invalidUserNameErrorMessage.GetTextFromThePage();
-            Assert.IsNotNull(invalidUsernameError);
+            string invalidUserError=LoginHelperObject.loginWithInvalidCredential();
+            Assert.IsNotNull(invalidUserError);
         }
-        
-        #region instantiate
-        private LoginPageObject _LoginHelper;
-        
-        public LoginPageObject LoginHelper
+
+        #region instantiateLogIn
+        private LoginHelper _LoginHelperObject;
+        public LoginHelper LoginHelperObject
         {
-            get { return _LoginHelper ?? (_LoginHelper = new LoginPageObject()); }
+            get { return _LoginHelperObject ?? (_LoginHelperObject = new LoginHelper()); }
         }
         #endregion
 

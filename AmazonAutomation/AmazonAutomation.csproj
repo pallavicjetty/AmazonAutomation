@@ -59,13 +59,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PageActionGenericMethod\SeleniumGetMethod.cs" />
-    <Compile Include="Test.HelperClass\Login.cs" />
+    <Compile Include="Test.HelperClass\LoginHelperClass.cs" />
+    <Compile Include="Test.HelperClass\LogoutHelperClass.cs" />
+    <Compile Include="TestSuits\UserLogoutTestCase.cs" />
+    <Compile Include="UIPageObject\HomePageObject.cs" />
     <Compile Include="UIPageObject\LoginPageObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PageActionGenericMethod\SeleniumDriver.cs" />
     <Compile Include="PageActionGenericMethod\SeleniumSetMethod.cs" />
     <Compile Include="TestSuits\LoginPageTestcase.cs" />
+    <Compile Include="UIPageObject\LogoutPageObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="TestData\App.config" />
