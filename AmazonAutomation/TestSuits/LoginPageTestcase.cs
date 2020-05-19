@@ -25,9 +25,9 @@ namespace AmazonAutomation.TestSuits
         public void AmazonLoginWithValidUserNameAndPassword()
         {
             LoginHelperObject.loginUsingValidCredentials();
-            //WebDriverWait wait = new WebDriverWait(SeleniumDriver.driver,20);
+            
             Thread.Sleep(40000);
-            //SeleniumDriver.driver.Manage().Timeouts().ImplicitWait(10, TimeUnit.SECONDS);
+            
             Assert.AreEqual(SeleniumDriver.driver.Title, "Online Shopping site in India: Shop Online for " +
                 "Mobiles, Books, Watches, Shoes and More - Amazon.in");
         }

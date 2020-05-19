@@ -17,5 +17,14 @@ namespace AmazonAutomation.UIPageObject
         [FindsBy(How = How.CssSelector, Using = "#icp-nav-flyout > span > span.nav-line-2 > span")]
         public IWebElement ChangeCountryOrRegionDropdown { get; set; }
 
+        [FindsBy(How =How.PartialLinkText,Using = "Change country/region.")]
+        public IWebElement CountryOrRegion { get; set; }
+
+        [FindsBy(How=How.Id,Using = "a-autoid-0-announce")]
+        public IWebElement SelectCountryDropdown { get; set; }
+
+        [FindsBy(How=How.CssSelector,Using = "#icp-selected-country_9 > div > div > div.a-fixed-left-grid-col.a-col-right")]
+        public IWebElement Mexico { get; set; }
+
     }
 }

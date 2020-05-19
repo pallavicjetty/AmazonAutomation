@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace AmazonAutomation
 {
     public static class SeleniumSetMethod
     {
+        //MouseHover
+        public static void MouseHover(this IWebElement element)
+        {
+            Actions actions = new Actions(SeleniumDriver.driver);
+            actions.MoveToElement(element).Build().Perform();
+        }
+        //Enter the text inside the textbox
         public static void EnterText(this IWebElement element, string value)
         {
             element.SendKeys(value);
