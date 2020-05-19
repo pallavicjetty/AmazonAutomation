@@ -1,5 +1,4 @@
 ﻿using AmazonAutomation.UIPageObject;
-using AmazonAutomation.TestSuits;
 using System.Configuration;
 using AmazonAutomation.PageAction;
 

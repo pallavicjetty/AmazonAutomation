@@ -18,6 +18,7 @@ namespace AmazonAutomation.TestSuits
             login.OpenBrowserAndNavigateToAmazon();
             login.AmazonLoginWithValidUserNameAndPassword();
             LogoutHelper.logOut();
+            Assert.AreEqual(SeleniumDriver.driver.Title, "Amazon Sign In");
 
         }
         #region instantiateLogout

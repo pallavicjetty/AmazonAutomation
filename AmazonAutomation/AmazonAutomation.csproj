@@ -59,9 +59,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PageActionGenericMethod\SeleniumGetMethod.cs" />
+    <Compile Include="Test.HelperClass\ChangeCountryOrRegionHelperClass.cs" />
     <Compile Include="Test.HelperClass\LoginHelperClass.cs" />
     <Compile Include="Test.HelperClass\LogoutHelperClass.cs" />
+    <Compile Include="Test.HelperClass\SearchForProductHelperClass.cs" />
+    <Compile Include="TestSuits\ChangeCountryOrRegionTestCase.cs" />
+    <Compile Include="TestSuits\SearchForProductTestCase.cs" />
     <Compile Include="TestSuits\UserLogoutTestCase.cs" />
+    <Compile Include="UIPageObject\ChangeCountryOrRegionPageObject.cs" />
     <Compile Include="UIPageObject\HomePageObject.cs" />
     <Compile Include="UIPageObject\LoginPageObject.cs" />
     <Compile Include="Program.cs" />
